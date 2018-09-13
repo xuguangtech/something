@@ -1,0 +1,31 @@
+<div class="sracels">
+    <div class="container">
+        <div id="canvas">
+            <script type="text/javascript" src="../assets/js/circles.js"></script>
+            <script>
+                var colors = [
+                    ['#F0F0F0', '#0DBAE4'], ['#F0F0F0', '#0DBAE4'], ['#F0F0F0', '#0DBAE4'], ['#0DBAE4', '#0DBAE4']
+                ];
+                for (var i = 1; i <= 6; i++) {
+                    var child = document.getElementById('circles-' + i),
+                        percentage = 50 + (i * 10);
+
+                    Circles.create({
+                        id:         child.id,
+                        percentage: percentage,
+                        radius:     80,
+                        width:      5,
+                        number:   	percentage / 10,
+                        text:       '%',
+                        colors:     colors[i - 1]
+                    });
+                }
+            </script>
+            <!--/-->
+        </div>
+    </div>
+</div>
+<div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+<div class="un-line">
+    <a href="#"><img src="{{ '/assets/images/line-2.png' | relative_url }}" class="img-responsive" alt=""/></a>
+</div>

@@ -1,0 +1,4 @@
+baseurl: /
+url: http://www.kimcheon.com
+source:      _source
+destination: _deploy
