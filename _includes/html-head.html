@@ -11,6 +11,24 @@
     <!--/fonts-->
     <!--js-->
     <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script>
+        $(document).ready(function(){
+            var isPhone = navigator.userAgent.match(/Phone/i);
+            var isItouch = navigator.userAgent.match(/iPhone/i);
+            var isIpad = navigator.userAgent.match(/iPad/i);
+            var isAndroid = navigator.userAgent.match(/Android/i);
+            if (isPhone || isItouch || isIpad || isAndroid) {
+                $(".johey").css("position", "static");
+                $("body").css("width", "140%");
+                $(".col-md-4").css("display", "inline-block");
+                $("button.form-control").css("margin-left", "60%").css("margin-bottom", "20%");
+                //$(".grids h2").each(function(){console.log($(this).hide())});
+                $(".rounded-1").css("margin-left", "15em");
+                $("#middle_img_div").css("margin-left", "-35px");
+            }
+            $(".grids h2").each(function(){console.log($(this).hide())});
+        });
+    </script>
     <!--/js-->
     <!---- start-smoth-scrolling---->
     <script type="text/javascript" src="{{ '/assets/js/move-top.js' | relative_url }}"></script>
@@ -24,4 +42,5 @@
         });
     </script>
     <!---- start-smoth-scrolling---->
+
 </head>

@@ -1,7 +1,7 @@
 <div class="sracels">
     <div class="container">
         <div id="canvas">
-            <script type="text/javascript" src="../assets/js/circles.js"></script>
+            <script type="text/javascript" src="{{ '/assets/js/circles.js' | relative_url }}"></script>
             <script>
                 var colors = [
                     ['#F0F0F0', '#0DBAE4'], ['#F0F0F0', '#0DBAE4'], ['#F0F0F0', '#0DBAE4'], ['#0DBAE4', '#0DBAE4']
@@ -11,7 +11,7 @@
                         percentage = 50 + (i * 10);
 
                     Circles.create({
-                        id:         child.id,
+                        //id:         child.id,
                         percentage: percentage,
                         radius:     80,
                         width:      5,
